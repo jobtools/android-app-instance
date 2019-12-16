@@ -24,14 +24,13 @@ public class AppInstance {
         return instance.get();
     }
 
-    private static Application getApplication()
-    {
+    private static Application getApplication() {
         try {
             Class className = Class.forName("android.app.ActivityThread");
             Method method = className.getMethod("currentApplication");
-            Object result = method.invoke(null, 0);
+            Object result = method.invoke(null, (Object[]) null);
 
-            return (Application)result;
+            return (Application) result;
         } catch (Throwable ignored) {
             Log.e("AppInstance", "You can't use AppInstance in your system.");
             return null;
