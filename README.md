@@ -17,6 +17,6 @@ allprojects {
 And add next dependencies in the build.gradle of the module:
 ```gradle
 dependencies {
-    implementation 'com.github.jobtools:android-app-instance:1.0.0'
+    implementation 'com.github.jobtools:android-app-instance:1.0.1'
 }
 ```
